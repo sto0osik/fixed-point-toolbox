@@ -32,8 +32,8 @@ class FixedNum():
 
 
 if __name__ == '__main__':
-    x = FixedNum(32000, 16, 1)
-    y = FixedNum(32000, 16, 1)
+    x = FixedNum(3200, 16, 1)
+    y = FixedNum(3200, 16, 1)
     z = x + y
     print(z)
     print(type(z))
