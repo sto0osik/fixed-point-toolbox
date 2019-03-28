@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class FixedNum():
     def __init__(self, value, word_length, frac_bits):
         self.word_length = word_length
@@ -25,10 +26,6 @@ class FixedNum():
         elif self.word_length == 64:
             assigned_type = np.int64(value)
         return assigned_type
-
-
-
-
 
 
 if __name__ == '__main__':
