@@ -8,13 +8,16 @@ class FixedNum():
         self.value = self.assign_type(value)
 
     def __repr__(self):
-        return (f'Binary value: {np.binary_repr(self.value, width=self.word_length)}\n'+
-        f'Decimal value: {self.value}\n'+
-        f'Word length: {self.word_length}\n'+
-        f'Fractional bits: {self.frac_bits}')
+        return (f'Binary value: {np.binary_repr(self.value, width=self.word_length)}\n' +
+                f'Decimal value: {self.value}\n' +
+                f'Word length: {self.word_length}\n' +
+                f'Fractional bits: {self.frac_bits}')
 
     def __add__(self, other):
-        return FixedNum(self.value+other.value, self.word_length, self.frac_bits)
+        return FixedNum(self.value + other.value, self.word_length, self.frac_bits)
+
+    def __sub__(self, other):
+        return FixedNum(self.value - other.value, self.word_length, self.frac_bits)
 
     def assign_type(self, value):
         if self.word_length == 8:
@@ -34,3 +37,9 @@ if __name__ == '__main__':
     z = x + y
     print(z)
     print(type(z))
+    print()
+
+    z = x - y
+    print(z)
+    print(type(z))
+    print()
